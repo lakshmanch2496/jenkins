@@ -8,7 +8,7 @@ pipeline {
 */	
     stages{
         
-        stage(''clone repo''){
+        stage('jenkins'){
             steps { 
 		    withCredentials(usernamePassword(credentialsId :jenkins-user-github ,passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME' )){
               // Get some code from a GitHub repository
