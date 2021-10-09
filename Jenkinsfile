@@ -1,20 +1,15 @@
 pipeline {
-    
-	agent any	
-    stages{
-        
-        stage('git'){
-            steps { 
-		 git --version 
-
-          }
-         }
-	    stage('maven'){
-		    steps {
-	                maven --version
-         }
-      }
+    agent any
+    stages {
+        stage('git') {
+            steps {
+                sh "git --version"
+            }
+        }
+        stage('mvn') {
+            steps {
+                sh "mvn --version"
+            }
+        }
     }
-}
-		    
-                
+} 
